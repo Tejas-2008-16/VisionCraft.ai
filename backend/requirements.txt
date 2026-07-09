@@ -8,4 +8,5 @@ numpy
 python-multipart
 aiofiles
 python-dotenv
-rembg
+rembg[cpu]
+onnxruntime
