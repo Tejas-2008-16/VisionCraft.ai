@@ -1,0 +1,34 @@
+# Python environment files
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.mutmut-cache
+.pytest_cache/
+.vscode/
+.idea/
+
+# Local configuration files
+.env
+
+# Application uploads and outputs
+uploads/
+outputs/
+temp/
+ai_models/
+
+# System files
+.DS_Store
+Thumbs.db
