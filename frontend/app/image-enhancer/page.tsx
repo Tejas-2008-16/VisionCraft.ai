@@ -51,7 +51,7 @@ const ENHANCEMENT_OPTIONS = [
   { id: "contrast", label: "Contrast+", icon: Contrast, color: "text-cyan-400", selected: false },
 ];
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://noble-serenity-production-e279.up.railway.app";
 
 export default function ImageEnhancerPage() {
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);

@@ -9,7 +9,6 @@ import {
   Cpu,
   CheckCircle2,
   AlertCircle,
-  Info,
   Sparkles,
   ImagePlus,
 } from "lucide-react";
@@ -42,7 +41,7 @@ const FAQ_ITEMS = [
   },
 ];
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://127.0.0.1:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "https://noble-serenity-production-e279.up.railway.app";
 
 export default function BackgroundRemoverPage() {
   const [imageFile, setImageFile] = useState<File | null>(null);

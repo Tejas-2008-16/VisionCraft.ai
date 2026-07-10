@@ -7,14 +7,14 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # App Settings
-    HOST: str = "127.0.0.1"
+    HOST: str = "0.0.0.0"
     PORT: int = 8000
     DEBUG: bool = True
     APP_NAME: str = "VisionCraft AI Backend"
 
     # Security Settings
     # Supports single origin or comma-separated list of origins
-    ALLOWED_ORIGINS: Union[str, List[str]] = ["http://localhost:3000"]
+    ALLOWED_ORIGINS: Union[str, List[str]] = ["https://vision-craft-ai-ri9p-ten.vercel.app", "http://localhost:3000"]
     MAX_UPLOAD_SIZE: int = 10 * 1024 * 1024  # 10MB in bytes
 
     # Storage Paths (Relative to project root)

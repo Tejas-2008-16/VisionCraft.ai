@@ -6,16 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Scissors,
   Image as ImageIcon,
-  Zap,
   ShieldCheck,
   Cpu,
-  Layers,
   Sparkles,
   ArrowRight,
   Upload,
   RefreshCw,
   FileImage,
-  Star,
   CheckCircle2,
 } from "lucide-react";
 import { UploadBox } from "@/components/ui/upload-box";
@@ -98,7 +95,6 @@ const FEATURES = [
 ];
 
 export default function Home() {
-  const [imageFile, setImageFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [processing, setProcessing] = useState(false);
   const [processedUrl, setProcessedUrl] = useState<string | null>(null);
@@ -106,7 +102,8 @@ export default function Home() {
 
   // Trigger stats count when component mounts
   useEffect(() => {
-    setIsClient(true);
+    const timer = setTimeout(() => setIsClient(true), 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const totalProcessed = useCounter(4208194, 2500, isClient);
@@ -114,7 +111,6 @@ export default function Home() {
   const activeUsers = useCounter(14205, 2000, isClient);
 
   const handleImageSelect = (file: File | null, url: string | null) => {
-    setImageFile(file);
     setPreviewUrl(url);
 
     if (file && url) {
@@ -519,7 +515,7 @@ export default function Home() {
             Frequently Asked Questions
           </h2>
           <p className="text-slate-400 text-sm md:text-base max-w-xl mx-auto">
-            Got questions? We've got answers.
+            {"Got questions? We've got answers."}
           </p>
         </div>
 
